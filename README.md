@@ -1,1 +1,2 @@
-# boutell-2023-session3
+# PygameAPITutorials
+A series of examples to help you learn to use Pygame
