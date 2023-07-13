@@ -8,9 +8,11 @@ def main():
     screen = pygame.display.set_mode((640, 480))
     pupil_y = 162
     pupil_x = 0
+    clock = pygame.time.Clock()
 
     while True:
         # TODO 4: Set the clock speed to 60 fps
+        clock.tick(60)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
