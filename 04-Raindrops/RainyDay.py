@@ -58,7 +58,7 @@ class Hero:
         # DONE 17: Draw (blit) this Hero, at this Hero's position, WITHOUT an umbrella:
         # self.screen.blit(self.image_no_umbrella, (self.x, self.y))
 
-        # TODO 21: Instead draw (blit) this Hero, at this Hero's position, as follows:
+        # DONE 21: Instead draw (blit) this Hero, at this Hero's position, as follows:
         #     If the current time is greater than this Hero's last_hit_time + 1,
         #       draw this Hero WITHOUT an umbrella,
         #       otherwise draw this Hero WITH an umbrella.
@@ -145,8 +145,8 @@ def main():
         test_drop.move()
 
         # DONE 14: As a temporary test, check if test_drop is off screen, if so reset the y position to 10
-        if test_drop.off_screen():
-            test_drop.y = 10
+        # if test_drop.off_screen():
+        #     test_drop.y = 10
 
         # DONE 10: As a temporary test, draw test_drop
         test_drop.draw()
@@ -154,11 +154,18 @@ def main():
         # DONE 20: As a temporary test, check if test_drop is hitting Mike (or Alyssa), if so set their last_hit_time
         if mike.hit_by(test_drop):
             mike.last_hit_time = time.time()
+            test_drop.x = 750
+            test_drop.y = 10
+        if alyssa.hit_by(test_drop):
+            alyssa.last_hit_time = time.time()
+            test_drop.x = 300
+            test_drop.y = 10
 
-        # TODO 22: Remove the code that reset the y of the test_drop when off_screen()
+        # DONE 22: Remove the code that reset the y of the test_drop when off_screen()
         #          Instead reset the test_drop y to 10 when mike is hit, additionally set the x to 750
         #          Then add similar code to alyssa that sets her last_hit_time and moves the test_drop to 10 320
         # --- end area of test_drop code that will be removed later
+
 
         # TODO 26: Draw the Cloud.
 
