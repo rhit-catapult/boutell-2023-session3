@@ -117,7 +117,6 @@ def main():
     clock = pygame.time.Clock()
 
     # DONE 7: As a temporary test, make a new Raindrop called test_drop at x=320 y=10
-    test_drop = Raindrop(screen, 300, 10)
 
     # DONE 15: Make a Hero, named mike, with appropriate images, starting at position x=200 y=400.
     mike = Hero(screen, 200, 400, "Mike_umbrella.png", "Mike.png")
@@ -164,24 +163,14 @@ def main():
 
         # --- begin area of test_drop code that will be removed later
         # DONE 12: As a temporary test, move test_drop
-        test_drop.move()
 
         # DONE 14: As a temporary test, check if test_drop is off screen, if so reset the y position to 10
         # if test_drop.off_screen():
         #     test_drop.y = 10
 
         # DONE 10: As a temporary test, draw test_drop
-        test_drop.draw()
 
         # DONE 20: As a temporary test, check if test_drop is hitting Mike (or Alyssa), if so set their last_hit_time
-        if mike.hit_by(test_drop):
-            mike.last_hit_time = time.time()
-            test_drop.x = 750
-            test_drop.y = 10
-        if alyssa.hit_by(test_drop):
-            alyssa.last_hit_time = time.time()
-            test_drop.x = 300
-            test_drop.y = 10
 
         # DONE 22: Remove the code that reset the y of the test_drop when off_screen()
         #          Instead reset the test_drop y to 10 when mike is hit, additionally set the x to 750
